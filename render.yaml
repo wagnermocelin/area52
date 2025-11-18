@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: power-training-backend
+    name: area52
     runtime: node
     region: oregon
     plan: free
