@@ -30,3 +30,7 @@ backend/.env
 *.njsproj
 *.sln
 *.sw?
+
+# Sensitive files
+senha gmail.txt
+*.env.production
