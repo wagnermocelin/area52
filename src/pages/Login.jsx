@@ -39,7 +39,7 @@ const Login = () => {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-4">
             <Dumbbell className="text-primary-600" size={32} />
           </div>
-          <h1 className="text-4xl font-bold text-white mb-2">Zen</h1>
+          <h1 className="text-4xl font-bold text-white mb-2">Power Training</h1>
           <p className="text-primary-100">Sistema para Personal Trainers</p>
         </div>
 
@@ -98,19 +98,11 @@ const Login = () => {
             </button>
           </form>
 
-          {/* Informações de acesso */}
+          {/* Créditos do desenvolvedor */}
           <div className="mt-6 pt-6 border-t border-gray-200">
-            <p className="text-xs text-gray-600 mb-3">Acessos de demonstração:</p>
-            <div className="space-y-2 text-xs">
-              <div className="bg-gray-50 p-3 rounded-lg">
-                <p className="font-medium text-gray-700">Personal Trainer:</p>
-                <p className="text-gray-600">trainer@zen.com / trainer123</p>
-              </div>
-              <div className="bg-gray-50 p-3 rounded-lg">
-                <p className="font-medium text-gray-700">Aluno:</p>
-                <p className="text-gray-600">joao@exemplo.com / aluno123</p>
-              </div>
-            </div>
+            <p className="text-xs text-center text-gray-500">
+              Sistema desenvolvido por <span className="font-medium text-gray-700">Wagner Henrique Mocelin</span>
+            </p>
           </div>
         </div>
       </div>
