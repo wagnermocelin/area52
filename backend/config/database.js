@@ -2,10 +2,9 @@ import mongoose from 'mongoose';
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGODB_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    // Remover opções deprecadas (useNewUrlParser e useUnifiedTopology)
+    // Elas não são mais necessárias no MongoDB Driver 4.0+
+    const conn = await mongoose.connect(process.env.MONGODB_URI);
 
     console.log(`✅ MongoDB conectado: ${conn.connection.host}`);
     console.log(`📦 Database: ${conn.connection.name}`);
