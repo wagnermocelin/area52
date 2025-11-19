@@ -35,12 +35,18 @@ async function ativarAlunos() {
     for (const student of students) {
       console.log(`🔧 Ativando: ${student.name} (${student.email})`);
       
-      student.password = hashedPassword;
-      student.status = 'active';
-      student.blocked = false;
-      student.emailVerified = true; // Marcar como verificado
-      
-      await student.save();
+      // Atualizar diretamente no banco para garantir que o hash seja salvo
+      await Student.updateOne(
+        { _id: student._id },
+        { 
+          $set: {
+            password: hashedPassword,
+            status: 'active',
+            blocked: false,
+            emailVerified: true
+          }
+        }
+      );
       
       console.log(`✅ Senha definida: ${defaultPassword}`);
       console.log('');
